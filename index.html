@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="A Leptos web application" />
+  <link rel="stylesheet" href="/leptos-example/styles-598fd3a8b082446f.css" integrity="sha384-okdMMp1MYXSkECB+z5Bgfi6QhOBxidwjm15/n9sNYmKdaPy/vywAsQC1WwfRoS2r"/>
+  
+<script type="module">
+import init, * as bindings from '/leptos-example/leptos-example-7f2b5732b2066f3a.js';
+const wasm = await init({ module_or_path: '/leptos-example/leptos-example-7f2b5732b2066f3a_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (theme !== 'light') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+<link rel="modulepreload" href="/leptos-example/leptos-example-7f2b5732b2066f3a.js" crossorigin="anonymous" integrity="sha384-R3p0zIhTymaB9HaebWtoeZlnJJqIaZhqKHrSwMm9Svj2MTPjGZY+tfpYcAKqTOPB"><link rel="preload" href="/leptos-example/leptos-example-7f2b5732b2066f3a_bg.wasm" crossorigin="anonymous" integrity="sha384-tYPn/OiPdUOrrtCAKs8hAAs1g/K4XPrStqzpbxEP12920zmcIrGYh2TKYeEWRJF7" as="fetch" type="application/wasm"></head>
+
+<body></body>
+
+</html>
