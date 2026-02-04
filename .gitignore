@@ -1,0 +1,7 @@
+/target
+/dist
+/node_modules
+/public/styles.css
+Cargo.lock
+package-lock.json
+.DS_Store

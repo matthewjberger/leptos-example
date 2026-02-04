@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="A Leptos web application" />
+  <link data-trunk rel="css" href="public/styles.css" />
+  <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs />
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (theme !== 'light') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+
+<body></body>
+
+</html>
