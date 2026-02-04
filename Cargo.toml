@@ -3,6 +3,10 @@ name = "leptos-example"
 version = "0.1.0"
 edition = "2024"
 
+[features]
+default = []
+gh-pages = []
+
 [dependencies]
 leptos = { version = "0.8", features = ["csr", "nightly"] }
 leptos_meta = { version = "0.8" }

@@ -6,6 +6,14 @@ use leptos_router::{components::*, path};
 mod components;
 mod pages;
 
+fn base_path() -> &'static str {
+    if cfg!(feature = "gh-pages") {
+        "/leptos-example/"
+    } else {
+        ""
+    }
+}
+
 use crate::pages::home::Home;
 use crate::pages::not_found::NotFound;
 
@@ -63,7 +71,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <Router>
+        <Router base=base_path()>
             <Routes fallback=NotFound>
                 <Route path=path!("/") view=Home />
             </Routes>
